@@ -47,8 +47,8 @@ class RouteTests: XCTestCase {
             .sendForTestingWithKitura { data, statusCode in
                 if let getResult = String(data: data, encoding: String.Encoding.utf8){
                     XCTAssertEqual(statusCode, 200)
-                    XCTAssertTrue(getResult.contains("<html"))
-                    XCTAssertTrue(getResult.contains("</html>"))
+                    XCTAssertTrue(getResult.contains("Hello"))
+                    XCTAssertTrue(getResult.contains("World"))
                 } else {
                     XCTFail("Return value from / was nil!")
                 }
